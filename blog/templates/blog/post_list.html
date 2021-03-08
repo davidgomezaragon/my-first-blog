@@ -6,6 +6,15 @@
         <br><br>
         <p style='color:red'><strong>Esta es la primera plantilla de mi proyecto</strong></p><br>
         <i>David Gómez Aragón</i>
+        <br><br>
+        <!--{{ posts }}-->
+        {% for post in posts %}
+            <div>
+                <p> publicado: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
 
